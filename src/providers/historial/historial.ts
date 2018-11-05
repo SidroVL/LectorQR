@@ -16,6 +16,7 @@ export class HistorialProvider {
     this.historial.unshift(dato);
 
     //despues de crear el elemento, lo abrimos
+    this.abrir_elemento_historial();
   }
   abrir_elemento_historial(index:number=0){
     let elemento=this.historial[index];

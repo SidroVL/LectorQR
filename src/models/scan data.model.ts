@@ -4,7 +4,11 @@ export class ScanData{
 
     constructor(texto:string){
         this.info=texto;
-        
+        this.tipo="nodefinido";
+        if(texto.startsWith("http")){
+            this.tipo="web";
+        }
+
     }
 
 }
