@@ -11,7 +11,7 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = GuardadosPage;
-
+//eliminamos la que habia y los import
 
   constructor() {
 
