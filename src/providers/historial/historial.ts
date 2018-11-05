@@ -1,17 +1,24 @@
-import { HttpClient } from '@angular/common/http';
+import { ScanData } from './../../models/scan data.model';
+
 import { Injectable } from '@angular/core';
 
-/*
-  Generated class for the HistorialProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class HistorialProvider {
-
-  constructor(public http: HttpClient) {
-    console.log('Hello HistorialProvider Provider');
+  private historial:ScanData[]=[];
+  constructor() {
+    
   }
 
+  agregar_elemento_historial(texto:string){
+    let dato=new ScanData(texto);
+    //metemos un elemento al principio del array
+    this.historial.unshift(dato);
+
+    //despues de crear el elemento, lo abrimos
+  }
+  abrir_elemento_historial(index:number=0){
+    let elemento=this.historial[index];
+    console.log(elemento);
+  }
 }
