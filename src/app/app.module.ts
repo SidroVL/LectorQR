@@ -33,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Barcod
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
